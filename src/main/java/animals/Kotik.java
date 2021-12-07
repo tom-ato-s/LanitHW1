@@ -1,6 +1,12 @@
+
+
 package animals;
 
 public class Kotik {
+    /* поля класса
+    name (имя), voice (голос, как мяукает),
+    satiety (сытость), weight (вес).
+    */
     private String name;
     private String voice;
     private int satiety;
@@ -8,6 +14,10 @@ public class Kotik {
     private static int count;
     private static final int METHODS = 5;
 
+    /* конструктор с параметрами: name (имя), voice (голос, как мяукает),
+     satiety (сытость), weight (вес).
+     со счетчиком созданных экземпляров класса
+     */
     public Kotik(String name, String voice, int satiety, int weight) {
         this.name = name;
         this.voice = voice;
@@ -16,10 +26,21 @@ public class Kotik {
         count++;
     }
 
+    /*  конструктор без параметров
+    со счетчиком созданных экземпляров класса
+    */
     public Kotik() {
         count++;
     }
 
+
+    /*
+    Методы play(), sleep(), wash(), walk(), hunt () без входящих параметров
+    возвращаают значение true, если котик не голоден
+    и уменьшает сытость на 1;
+    возвращает false, если котик голоден -
+    выводит на печать голос кота
+     */
     public boolean play() {
         if (satiety > 0) {
             System.out.println("Котик играет");
@@ -30,6 +51,7 @@ public class Kotik {
             return false;
         }
     }
+
 
     public boolean sleep() {
         if (satiety > 0) {
@@ -75,20 +97,46 @@ public class Kotik {
         }
     }
 
+    /*
+    3 перегруженных метода eat()
+     */
+    /*
+    первый принимет количество сытости, ничего не возвращает,
+    увеличивает количество сытости на введенное значение
+     */
+
     public void eat(int satiety) {
         this.satiety += satiety;
     }
+
+    /*
+     второй метод eat() принимет количество сытости, тип еды, ничего не возвращает,
+    увеличивает количество сытости на введенное значение
+     */
 
     public void eat(int satiety, String typeEat) {
         this.satiety += satiety;
     }
 
+    /*
+     третий метод eat() ничего не принимае, ничего не возвращает,
+    вызывает своей метод с 2 параметрами
+    Содержит значения для вызываемого метода с 2-мя параметрами
+     */
     public void eat() {
         int satietyIn =10;
         String tipeEatIn = "Мясо";
         eat(satietyIn, tipeEatIn);
     }
 
+    /*
+    Медод liveAnotherDay() ничего не принимает,
+    возвращает массив данных из 24 строк о том,
+    что делал котик в течении 24 часов
+    содержит переменную n которой случайто присваеваются значения от 1 до 5
+    (количество действий котика)
+    содержит метод switch(n) который случайто выбирает действие котика
+     */
     public String[]  liveAnotherDay() {
         String[] arr = new String[24];
         for(int i = 0; i<24; i++) {
@@ -138,6 +186,8 @@ public class Kotik {
         }
         return arr;
     }
+
+    // get-ры и set-ры для полей данного класса
 
     public String getName() {
         return name;
