@@ -1,23 +1,23 @@
-/* класс Кролик.
+/* класс Лошадь.
 Расширяет Herbivore(травоядные), дополняет интерфейс Run(бежать), Voice(говорить)
 */
 
-package main.java.animals.herbivore;
-
-import main.java.animals.Herbivore;
+package animals;
+import animals.Herbivore;
 import animals.behavior.Run;
 import animals.behavior.Voice;
 
-public class Rabbit extends Herbivore implements Run, Voice {
+public class Horse extends Herbivore implements Run, Voice {
 
     @Override
     public void run() {
-        System.out.println("Кролик бежит");
+        System.out.println("Лошадь бежит");
     }
 
     @Override
     public String getVoice() {
-        String vois = "Ик-ик";
+        String vois = "Иго-го";
         return vois;
     }
+
 }

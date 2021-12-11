@@ -3,17 +3,15 @@
 В клсассе создаются экземпляры классов животных, действий, виды еды
  */
 
-package main.java;
 
+import employee.Worker;
 import animals.behavior.Swim;
 import food.Grass;
 import food.Meat;
-import main.java.animals.carnivorous.*;
-import main.java.animals.herbivore.Duck;
-import main.java.animals.herbivore.Horse;
-import main.java.animals.herbivore.Rabbit;
-import main.java.animals.zoo.herbivore.*;
-import main.java.employee.Worker;
+import animals.Kotik;
+import animals.Fish;
+import animals.*;
+import animals.Duck;
 
 public class Zoo {
 
@@ -49,7 +47,7 @@ public class Zoo {
         //хищники
         Eagle eagk = new Eagle();
         Fish fish = new Fish();
-        Kotik kotik = new Kotik();
+        animals.Kotik kotik = new Kotik();
 
         //виды еды
         food.Grass grass = new Grass();

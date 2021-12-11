@@ -1,9 +1,9 @@
 /* класс Оерел.
 Расширяет Carnivorous(хищники), дополняет интерфейс Run(бежать), Fly(летель), Voice(говорить)*/
 
-package main.java.animals.carnivorous;
+package animals;
 
-import main.java.animals.Carnivorous;
+import animals.Carnivorous;
 import animals.behavior.Run;
 import animals.behavior.Fly;
 import animals.behavior.Voice;

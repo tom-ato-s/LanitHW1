@@ -1,8 +1,25 @@
-
+/* класс Котик.
+Расширяет Carnivorous(хищники), дополняет интерфейс Run(бежать), Voice(говорить)*/
 
 package animals;
 
-public class Kotik {
+import animals.Carnivorous;
+import animals.behavior.Run;
+import animals.behavior.Voice;
+
+public class Kotik extends Carnivorous implements Run, Voice {
+
+    @Override
+    public void run() {
+        System.out.println("Котик бежит");
+    }
+
+    @Override
+    public String getVoice() {
+        String vois = "Мяу-Мяу";
+        return vois;
+    }
+
     /* поля класса
     name (имя), voice (голос, как мяукает),
     satiety (сытость), weight (вес).
@@ -197,21 +214,21 @@ public class Kotik {
         this.name = name;
     }
 
-    public String getVoice() {
-        return voice;
-    }
+//    public String getVoice() {
+//        return voice;
+//    }
 
-    public void setVoice(String voice) {
-        this.voice = voice;
-    }
+//    public void setVoice(String voice) {
+//        this.voice = voice;
+//    }
 
-    public int getSatiety() {
-        return satiety;
-    }
+//    public int getSatiety() {
+//        return satiety;
+//    }
 
-    public void setSatiety(int satiety) {
-        this.satiety = satiety;
-    }
+//    public void setSatiety(int satiety) {
+//        this.satiety = satiety;
+//    }
 
     public int getWeight() {
         return weight;

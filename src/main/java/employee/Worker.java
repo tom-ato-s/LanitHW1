@@ -1,9 +1,9 @@
 /*Класс Работник. Он кормит и просит сказать жывотных
 * */
 
-package main.java.employee;
+package employee;
 
-import main.java.animals.Animal;
+import animals.Animal;
 import food.Food;
 import animals.behavior.Voice;
 

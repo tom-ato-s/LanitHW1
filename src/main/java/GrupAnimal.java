@@ -2,8 +2,6 @@
 используется методом createPond() в классе Zoo
  */
 
-package main.java;
-
 public class GrupAnimal<T> {
    private T[] grupAnimal;
 

@@ -27,7 +27,7 @@ public class Application {
         Kotik kotik2 = new Kotik();
         //присвоение значений полям объекта kotik2, созданному без параметров
         kotik2.setName("Kity");
-        kotik2.setVoice("Mew-Mew");
+  //      kotik2.setVoice("Mew-Mew");
         kotik2.setSatiety(2);
         kotik2.setWeight(6);
 
