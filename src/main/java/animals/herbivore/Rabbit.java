@@ -2,9 +2,9 @@
 Расширяет Herbivore(травоядные), дополняет интерфейс Run(бежать), Voice(говорить)
 */
 
-package main.java.animals.zoo.herbivore;
+package main.java.animals.herbivore;
 
-import animals.zoo.herbivore.Herbivore;
+import main.java.animals.Herbivore;
 import animals.behavior.Run;
 import animals.behavior.Voice;
 

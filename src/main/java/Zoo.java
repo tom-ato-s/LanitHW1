@@ -8,7 +8,10 @@ package main.java;
 import animals.behavior.Swim;
 import food.Grass;
 import food.Meat;
-import main.java.animals.zoo.carnivorous.*;
+import main.java.animals.carnivorous.*;
+import main.java.animals.herbivore.Duck;
+import main.java.animals.herbivore.Horse;
+import main.java.animals.herbivore.Rabbit;
 import main.java.animals.zoo.herbivore.*;
 import main.java.employee.Worker;
 

@@ -1,7 +1,7 @@
 /* Абстрактный класс Хищников
  * переопределяет метод eat() для хищников
  * */
-package animals.zoo.herbivore;
+package main.java.animals;
 
 import main.java.animals.Animal;
 import  food.Food;

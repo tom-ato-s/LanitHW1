@@ -1,9 +1,9 @@
 /* класс Котик.
 Расширяет Carnivorous(хищники), дополняет интерфейс Run(бежать), Voice(говорить)*/
 
-package main.java.animals.zoo.carnivorous;
+package main.java.animals.carnivorous;
 
-import animals.zoo.carnivorous.Carnivorous;
+import main.java.animals.Carnivorous;
 import animals.behavior.Run;
 import animals.behavior.Voice;
 

@@ -1,9 +1,9 @@
 /* класс Рыба(хищник).
 Расширяет Carnivorous(хищники), дополняет интерфейс Swim(плыть)*/
 
-package main.java.animals.zoo.carnivorous;
+package main.java.animals.carnivorous;
 
-import animals.zoo.carnivorous.Carnivorous;
+import main.java.animals.Carnivorous;
 import animals.behavior.Swim;
 
 public class Fish extends Carnivorous implements Swim {

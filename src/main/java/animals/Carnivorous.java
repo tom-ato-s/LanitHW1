@@ -2,7 +2,7 @@
 * переопределяет метод eat() для хищников
 * */
 
-package animals.zoo.carnivorous;
+package main.java.animals;
 
 import main.java.animals.Animal;
 import food.Food;
