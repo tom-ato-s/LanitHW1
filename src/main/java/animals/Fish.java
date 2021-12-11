@@ -2,8 +2,7 @@
 Расширяет Carnivorous(хищники), дополняет интерфейс Swim(плыть)*/
 
 package animals;
-import animals.Carnivorous;
-import animals.behavior.Swim;
+import animals.Swim;
 
 public class Fish extends Carnivorous implements Swim {
 

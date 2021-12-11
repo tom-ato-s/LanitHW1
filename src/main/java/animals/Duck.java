@@ -4,11 +4,10 @@
 
 package animals;
 
-import animals.Herbivore;
-import animals.behavior.Run;
-import animals.behavior.Swim;
-import animals.behavior.Fly;
-import animals.behavior.Voice;
+import animals.Run;
+import animals.Swim;
+import animals.Fly;
+import animals.Voice;
 
 public class Duck extends Herbivore implements Run, Swim, Fly, Voice {
 

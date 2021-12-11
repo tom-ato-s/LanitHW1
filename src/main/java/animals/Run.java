@@ -1,6 +1,6 @@
 // Интерфейс наделяет животных фунцией бежать
 
-package animals.behavior;
+package animals;
 
 public interface Run {
    public void run();

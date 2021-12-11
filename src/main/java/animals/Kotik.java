@@ -3,9 +3,8 @@
 
 package animals;
 
-import animals.Carnivorous;
-import animals.behavior.Run;
-import animals.behavior.Voice;
+import animals.Run;
+import animals.Voice;
 
 public class Kotik extends Carnivorous implements Run, Voice {
 

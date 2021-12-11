@@ -5,7 +5,7 @@ package employee;
 
 import animals.Animal;
 import food.Food;
-import animals.behavior.Voice;
+import animals.Voice;
 
 public class Worker {
 

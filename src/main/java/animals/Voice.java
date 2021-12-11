@@ -1,6 +1,6 @@
 // Интерфейс наделяет животных фунцией подавать голос
 
-package animals.behavior;
+package animals;
 
 public interface Voice {
   public String getVoice();

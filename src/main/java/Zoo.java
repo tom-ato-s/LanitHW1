@@ -5,7 +5,7 @@
 
 
 import employee.Worker;
-import animals.behavior.Swim;
+import animals.Swim;
 import food.Grass;
 import food.Meat;
 import animals.Kotik;

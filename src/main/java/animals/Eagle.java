@@ -3,10 +3,9 @@
 
 package animals;
 
-import animals.Carnivorous;
-import animals.behavior.Run;
-import animals.behavior.Fly;
-import animals.behavior.Voice;
+import animals.Run;
+import animals.Fly;
+import animals.Voice;
 
 public class Eagle extends Carnivorous implements Run, Fly, Voice {
 

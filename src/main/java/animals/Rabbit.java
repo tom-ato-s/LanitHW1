@@ -4,9 +4,8 @@
 
 package animals;
 
-import animals.Herbivore;
-import animals.behavior.Run;
-import animals.behavior.Voice;
+import animals.Run;
+import animals.Voice;
 
 public class Rabbit extends Herbivore implements Run, Voice {
 
