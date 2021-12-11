@@ -2,9 +2,6 @@ package main.java;
 
 public class GrupAnimal<T> {
     T[] grupAnimal;
-
-
-
     GrupAnimal(T[] grupAnimal) {
         this.grupAnimal = grupAnimal;
     }

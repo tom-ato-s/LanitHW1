@@ -10,6 +10,7 @@ import main.java.employee.Worker;
 
 public class Zoo {
 
+    //создаем массив животных из пруда
     private static Swim[] createPond(){
 
         Duck duck1 = new Duck();
@@ -62,12 +63,11 @@ public class Zoo {
         //голос котика
         worker.getVoice(kotik);
 
-
-
-
-               Swim[] pond = createPond();
-               for(Swim el: pond) {
-                el.swim();
-                }
+        //получение массива водоплавающих из createPond()
+        Swim[] pond = createPond();
+        //применение метода swim() к элементам
+        for(Swim el: pond) {
+            el.swim();
+        }
     }
 }
