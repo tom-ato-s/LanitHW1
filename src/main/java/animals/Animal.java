@@ -4,7 +4,7 @@
 и реализованный клас  setSatiety() - добавление сытоски
  */
 
-package animals.zoo;
+package main.java.animals;
 
 import food.Food;
 

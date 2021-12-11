@@ -3,7 +3,7 @@
  * */
 package animals.zoo.herbivore;
 
-import animals.zoo.Animal;
+import main.java.animals.Animal;
 import  food.Food;
 import  food.Grass;
 
