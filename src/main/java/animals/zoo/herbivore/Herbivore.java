@@ -1,10 +1,13 @@
+/* Абстрактный класс Хищников
+ * переопределяет метод eat() для хищников
+ * */
 package animals.zoo.herbivore;
+
 import animals.zoo.Animal;
 import  food.Food;
 import  food.Grass;
-import  food.Meat;
-public abstract class Herbivore extends Animal{
 
+public abstract class Herbivore extends Animal{
 
 //травоядное ест только траву
     @Override

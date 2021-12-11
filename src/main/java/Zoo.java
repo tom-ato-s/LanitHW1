@@ -1,7 +1,11 @@
+/*
+Главный класс homework2
+В клсассе создаются экземпляры классов животных, действий, виды еды
+ */
+
 package main.java;
 
 import animals.behavior.Swim;
-import animals.zoo.Animal;
 import food.Grass;
 import food.Meat;
 import main.java.animals.zoo.carnivorous.*;
@@ -21,7 +25,8 @@ public class Zoo {
         Fish fish4 = new Fish();
         Fish fish5 = new Fish();
 
-        animals.behavior.Swim[] an = new Swim[7];
+        //создает масив для пруда
+        Swim[] an = new Swim[7];
         GrupAnimal<Swim> pond = new GrupAnimal<>(an);
         pond.add(0, duck1);
         pond.add(1, duck2);
@@ -49,19 +54,29 @@ public class Zoo {
         //работник зоопарка
         Worker worker = new Worker();
 
+        //кормим котика мясом смотрим на сытость
+        System.out.println("Сытость: " + kotik.getSatiety() + " у " + kotik.getClass().getSimpleName());
+        worker.feed(kotik, meat);
+        System.out.println("Сытость: " + kotik.getSatiety() + " у " + kotik.getClass().getSimpleName());
+        //кормим котика травой смотрим на сытость
+        worker.feed(kotik, grass);
+        System.out.println("Сытость: " + kotik.getSatiety() + " у " + kotik.getClass().getSimpleName());
 
-     //   worker.feed(horse, grass);
 
-        //кормим утрку мясом смотрим на сытость
-        System.out.println(duck.getSatiety());
+
+        //кормим утку мясом смотрим на сытость
+        System.out.println("Сытость: " + duck.getSatiety() + " у " + duck.getClass().getSimpleName());
         worker.feed(duck, meat);
-        System.out.println(duck.getSatiety());
+        System.out.println("Сытость: " + duck.getSatiety() + " у " + duck.getClass().getSimpleName());
         //кормим утрку травой смотрим на сытость
         worker.feed(duck, grass);
-        System.out.println(duck.getSatiety());
+        System.out.println("Сытость: " + duck.getSatiety() + " у " + duck.getClass().getSimpleName());
 
-        //голос котика
+        //рабочий просит подать голос котика
         worker.getVoice(kotik);
+
+        //рабочий просит подать голос рыбу - ошибка компиляции
+       //worker.getVoice(fish);
 
         //получение массива водоплавающих из createPond()
         Swim[] pond = createPond();

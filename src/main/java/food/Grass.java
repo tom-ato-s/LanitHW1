@@ -1,6 +1,13 @@
+/*класс Трава.
+расширяет класс Food.
+переопределяет метод getEnergy
+ */
+
 package food;
 
-public class Grass extends food.Food {
+import food.Food;
+
+public class Grass extends Food {
 
     @Override
     public int getEnergy(){

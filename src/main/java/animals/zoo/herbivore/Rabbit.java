@@ -1,3 +1,7 @@
+/* класс Кролик.
+Расширяет Herbivore(травоядные), дополняет интерфейс Run(бежать), Voice(говорить)
+*/
+
 package main.java.animals.zoo.herbivore;
 
 import animals.zoo.herbivore.Herbivore;

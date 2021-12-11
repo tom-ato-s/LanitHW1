@@ -1,11 +1,16 @@
+/* Абстрактный класс Хищников
+* переопределяет метод eat() для хищников
+* */
+
 package animals.zoo.carnivorous;
+
 import animals.zoo.Animal;
 import food.Food;
-import  food.Grass;
 import  food.Meat;
+
 public abstract class Carnivorous extends Animal {
 
-
+//хищники едят только мясо
     @Override
     public void eat(Food food) {
         if (food instanceof Meat) {

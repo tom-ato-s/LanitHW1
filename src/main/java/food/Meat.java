@@ -1,6 +1,11 @@
-package food;
+/*класс Мясо.
+расширяет класс Food.
+переопределяет метод getEnergy
+ */
 
-public class Meat extends food.Food {
+package food;
+import food.Food;
+public class Meat extends Food {
 
     @Override
     public int getEnergy(){

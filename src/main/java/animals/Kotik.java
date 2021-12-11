@@ -41,7 +41,7 @@ public class Kotik {
     возвращает false, если котик голоден -
     выводит на печать голос кота
      */
-    public boolean play() {
+    private boolean play() {
         if (satiety > 0) {
             System.out.println("Котик играет");
             satiety--;
@@ -53,7 +53,7 @@ public class Kotik {
     }
 
 
-    public boolean sleep() {
+    private boolean sleep() {
         if (satiety > 0) {
             System.out.println("Котик спит");
             satiety--;
@@ -64,7 +64,7 @@ public class Kotik {
         }
     }
 
-    public boolean wash() {
+    private boolean wash() {
         if(satiety >0) {
             System.out.println("Котик умывается");
             satiety--;
@@ -75,7 +75,7 @@ public class Kotik {
         }
     }
 
-    public boolean walk() {
+    private boolean walk() {
         if(satiety >0) {
             System.out.println("Котик гуляет");
             satiety--;
@@ -86,7 +86,7 @@ public class Kotik {
         }
     }
 
-    public boolean hunt () {
+    private boolean hunt () {
         if(satiety >0) {
             System.out.println("Котик охотится");
             satiety--;
@@ -105,7 +105,7 @@ public class Kotik {
     увеличивает количество сытости на введенное значение
      */
 
-    public void eat(int satiety) {
+    private void eat(int satiety) {
         this.satiety += satiety;
     }
 
@@ -114,7 +114,7 @@ public class Kotik {
     увеличивает количество сытости на введенное значение
      */
 
-    public void eat(int satiety, String typeEat) {
+    private void eat(int satiety, String typeEat) {
         this.satiety += satiety;
     }
 
@@ -123,7 +123,7 @@ public class Kotik {
     вызывает своей метод с 2 параметрами
     Содержит значения для вызываемого метода с 2-мя параметрами
      */
-    public void eat() {
+    private void eat() {
         int satietyIn =10;
         String tipeEatIn = "Мясо";
         eat(satietyIn, tipeEatIn);

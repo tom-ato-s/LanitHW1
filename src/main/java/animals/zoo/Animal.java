@@ -1,4 +1,11 @@
+/* Абстрактный класс Животные
+Главный родительский класс животных
+имеет абстрактный метод eat() (еда) и
+и реализованный клас  setSatiety() - добавление сытоски
+ */
+
 package animals.zoo;
+
 import food.Food;
 
 public abstract class Animal {
@@ -14,5 +21,4 @@ public abstract class Animal {
     public void setSatiety(int satiety) {
         this.satiety += satiety;
     }
-
 }
