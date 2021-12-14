@@ -8,8 +8,13 @@ import animals.Run;
 import animals.Swim;
 import animals.Fly;
 import animals.Voice;
+import main.java.model.Size;
 
 public class Duck extends Herbivore implements Run, Swim, Fly, Voice {
+
+    public Duck(String name) {
+        super(name);
+    }
 
     @Override
     public void run() {
@@ -30,5 +35,10 @@ public class Duck extends Herbivore implements Run, Swim, Fly, Voice {
     public String getVoice() {
         String vois = "Кря-кря";
      return vois;
+    }
+    @Override
+    public Size getSize() {
+        Size s = Size.SMALL;
+        return s;
     }
 }

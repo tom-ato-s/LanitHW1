@@ -24,7 +24,7 @@ public class Application {
 
         // Создание объектов класса Kotik
         Kotik kotik1 = new Kotik("Max", "Mew", 10, 8);
-        Kotik kotik2 = new Kotik();
+        Kotik kotik2 = new Kotik("Мурчик");
         //присвоение значений полям объекта kotik2, созданному без параметров
         kotik2.setName("Kity");
   //      kotik2.setVoice("Mew-Mew");

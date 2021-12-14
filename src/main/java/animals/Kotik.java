@@ -5,7 +5,8 @@ package animals;
 
 import animals.Run;
 import animals.Voice;
-
+import main.java.model.Size;
+import animals.Carnivorous;
 public class Kotik extends Carnivorous implements Run, Voice {
 
     @Override
@@ -23,7 +24,7 @@ public class Kotik extends Carnivorous implements Run, Voice {
     name (имя), voice (голос, как мяукает),
     satiety (сытость), weight (вес).
     */
-    private String name;
+ //   private String name;
     private String voice;
     private int satiety;
     private int weight;
@@ -35,7 +36,7 @@ public class Kotik extends Carnivorous implements Run, Voice {
      со счетчиком созданных экземпляров класса
      */
     public Kotik(String name, String voice, int satiety, int weight) {
-        this.name = name;
+        super(name);
         this.voice = voice;
         this.satiety = satiety;
         this.weight = weight;
@@ -45,7 +46,8 @@ public class Kotik extends Carnivorous implements Run, Voice {
     /*  конструктор без параметров
     со счетчиком созданных экземпляров класса
     */
-    public Kotik() {
+    public Kotik(String name) {
+        super(name);
         count++;
     }
 
@@ -206,11 +208,11 @@ public class Kotik extends Carnivorous implements Run, Voice {
     // get-ры и set-ры для полей данного класса
 
     public String getName() {
-        return name;
+        return super.name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        super.name = name;
     }
 
 //    public String getVoice() {
@@ -243,6 +245,12 @@ public class Kotik extends Carnivorous implements Run, Voice {
 
     public static void setCount(int count) {
         Kotik.count = count;
+    }
+
+    @Override
+    public Size getSize() {
+        Size s = Size.SMALL;
+        return s;
     }
 
 }

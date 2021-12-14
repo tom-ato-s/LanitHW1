@@ -12,19 +12,21 @@ import animals.Kotik;
 import animals.Fish;
 import animals.*;
 import animals.Duck;
+import main.java.food.WrongFoodException;
+import main.java.model.WrongSizeException;
 
 public class Zoo {
 
     //создаем массив животных из пруда
     private static Swim[] createPond(){
 
-        Duck duck1 = new Duck();
-        Duck duck2 = new Duck();
-        Fish fish1 = new Fish();
-        Fish fish2 = new Fish();
-        Fish fish3 = new Fish();
-        Fish fish4 = new Fish();
-        Fish fish5 = new Fish();
+        Duck duck1 = new Duck("Утя-утя");
+        Duck duck2 = new Duck("Уточка");
+        Fish fish1 = new Fish("Рыба");
+        Fish fish2 = new Fish("Рыбка");
+        Fish fish3 = new Fish("Рыбочка");
+        Fish fish4 = new Fish("Малек");
+        Fish fish5 = new Fish("Рыбище");
 
         //создает масив для пруда
         Swim[] an = new Swim[7];
@@ -41,19 +43,22 @@ public class Zoo {
 
     public static void main(String[] args) {
         //травоядные
-        Duck duck = new Duck();
-        Horse horse = new Horse();
-        Rabbit rabbit = new Rabbit();
+        Duck duck = new Duck("Утка");
+        Horse horse = new Horse("Лошадь");
+        Rabbit rabbit = new Rabbit("Кролик");
         //хищники
-        Eagle eagk = new Eagle();
-        Fish fish = new Fish();
-        animals.Kotik kotik = new Kotik();
+        Eagle eagk = new Eagle("Орел");
+        Fish fish = new Fish("Рыба");
+        animals.Kotik kotik = new Kotik("Котик");
 
         //виды еды
         food.Grass grass = new Grass();
         food.Meat meat = new Meat();
         //работник зоопарка
         Worker worker = new Worker();
+
+//        WrongFoodException wfe = new WrongFoodException();
+//        WrongSizeException wse = new WrongSizeException();
 
         //кормим котика мясом смотрим на сытость
         System.out.println("Сытость: " + kotik.getSatiety() + " у " + kotik.getClass().getSimpleName());
@@ -64,14 +69,11 @@ public class Zoo {
         System.out.println("Сытость: " + kotik.getSatiety() + " у " + kotik.getClass().getSimpleName());
 
 
-
-        //кормим утку мясом смотрим на сытость
+        System.out.println("Сытость: " + duck.getSatiety() + " у " + duck.getClass().getSimpleName());worker.feed(duck, meat);
         System.out.println("Сытость: " + duck.getSatiety() + " у " + duck.getClass().getSimpleName());
-        worker.feed(duck, meat);
-        System.out.println("Сытость: " + duck.getSatiety() + " у " + duck.getClass().getSimpleName());
-        //кормим утрку травой смотрим на сытость
         worker.feed(duck, grass);
         System.out.println("Сытость: " + duck.getSatiety() + " у " + duck.getClass().getSimpleName());
+
 
         //рабочий просит подать голос котика
         worker.getVoice(kotik);
