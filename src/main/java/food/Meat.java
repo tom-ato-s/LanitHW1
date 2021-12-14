@@ -4,7 +4,9 @@
  */
 
 package food;
+
 import food.Food;
+
 public class Meat extends Food {
 
     @Override

@@ -16,5 +16,4 @@ public class GrupAnimal<T> {
     public T[] getArr() {
         return grupAnimal;
     }
-
 }

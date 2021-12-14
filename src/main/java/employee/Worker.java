@@ -6,7 +6,7 @@ package employee;
 import animals.Animal;
 import food.Food;
 import animals.Voice;
-import main.java.food.WrongFoodException;
+import food.WrongFoodException;
 
 public class Worker {
 

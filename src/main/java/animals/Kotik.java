@@ -5,8 +5,9 @@ package animals;
 
 import animals.Run;
 import animals.Voice;
-import main.java.model.Size;
+import model.Size;
 import animals.Carnivorous;
+
 public class Kotik extends Carnivorous implements Run, Voice {
 
     @Override
@@ -24,7 +25,6 @@ public class Kotik extends Carnivorous implements Run, Voice {
     name (имя), voice (голос, как мяукает),
     satiety (сытость), weight (вес).
     */
- //   private String name;
     private String voice;
     private int satiety;
     private int weight;
@@ -214,22 +214,6 @@ public class Kotik extends Carnivorous implements Run, Voice {
     public void setName(String name) {
         super.name = name;
     }
-
-//    public String getVoice() {
-//        return voice;
-//    }
-
-//    public void setVoice(String voice) {
-//        this.voice = voice;
-//    }
-
-//    public int getSatiety() {
-//        return satiety;
-//    }
-
-//    public void setSatiety(int satiety) {
-//        this.satiety = satiety;
-//    }
 
     public int getWeight() {
         return weight;

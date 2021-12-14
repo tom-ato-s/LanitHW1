@@ -4,9 +4,9 @@
 package animals;
 
 import animals.Animal;
-import  food.Food;
-import  food.Grass;
-import main.java.food.WrongFoodException;
+import food.Food;
+import food.Grass;
+import food.WrongFoodException;
 
 public abstract class Herbivore extends Animal{
 
@@ -19,12 +19,11 @@ public abstract class Herbivore extends Animal{
     public void eat(Food food) {
         try{
             if (food instanceof Grass)
-            throw new WrongFoodException("Еда не подходит для данного животного", food);
+            throw new WrongFoodException("Ошибочка!", food);
             this.setSatiety(food.getEnergy());
             System.out.println("Поел: " + food.getClass().getSimpleName());
         } catch (WrongFoodException e) {
             System.out.println(e + " Еда не подходит для данного животного. Травоядные не едят мясо");
-           // throw e;
         }
     }
 }

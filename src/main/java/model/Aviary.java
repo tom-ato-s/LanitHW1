@@ -1,27 +1,30 @@
-package main.java.model;
+package model;
+
 import animals.Animal;
 import animals.Carnivorous;
 import animals.Herbivore;
 import java.util.HashMap;
+import model.Size;
 
 public class Aviary <T extends Animal> {
-
     private Size size;
     private HashMap <String, T> groupAnimals;
 
-    Aviary(Size size) {
+   public Aviary(Size size) {
         groupAnimals = new HashMap<>();
         this.size = size;
     }
 
-    public void addAnimal(T animal){
-      //  throw  new WrongSizeException ("Размер животного не совпадает с размером вальера");
-        groupAnimals.put(animal.getName(), animal);
-
+    public void addAnimal(T animal) {
+       if (animal.getSize().equals(size)) {
+           groupAnimals.put(animal.getName(), animal);
+       } else{
+           throw new WrongSizeException(" животного размер не совпадает с размером вальера", animal.getSize());
+       }
     }
 
     public T getAnimal(String name) {
-            return groupAnimals.get(name);
+       return groupAnimals.get(name);
         }
 
     public boolean removeAnimal(String name) {

@@ -6,7 +6,7 @@ package animals;
 import animals.Run;
 import animals.Fly;
 import animals.Voice;
-import main.java.model.Size;
+import model.Size;
 
 public class Eagle extends Carnivorous implements Run, Fly, Voice {
 
@@ -32,8 +32,7 @@ public class Eagle extends Carnivorous implements Run, Fly, Voice {
 
     @Override
     public Size getSize() {
-        Size s = Size.MEDIUM;
+        Size s = Size.SMALL;
         return s;
     }
-
 }

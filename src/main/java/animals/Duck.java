@@ -8,7 +8,7 @@ import animals.Run;
 import animals.Swim;
 import animals.Fly;
 import animals.Voice;
-import main.java.model.Size;
+import model.Size;
 
 public class Duck extends Herbivore implements Run, Swim, Fly, Voice {
 

@@ -7,14 +7,15 @@
 package animals;
 
 import food.Food;
-import main.java.food.WrongFoodException;
-import main.java.model.Size;
+import food.WrongFoodException;
+import model.Size;
 
-
-public abstract class Animal    {
+public abstract class Animal{
     public String name;
     private int satiety;
-
+    /*
+    Конструктор с сходным параметром имени животного
+    */
     Animal(String name) {
         this.name = name;
     }

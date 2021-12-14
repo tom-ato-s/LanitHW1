@@ -3,7 +3,6 @@
 В клсассе создаются экземпляры классов животных, действий, виды еды
  */
 
-
 import employee.Worker;
 import animals.Swim;
 import food.Grass;
@@ -12,11 +11,19 @@ import animals.Kotik;
 import animals.Fish;
 import animals.*;
 import animals.Duck;
-import main.java.food.WrongFoodException;
-import main.java.model.WrongSizeException;
+import animals.Eagle;
+import animals.Rabbit;
+import food.WrongFoodException;
+import model.Aviary;
+import model.Size;
+import model.WrongSizeException;
+import animals.Herbivore;
+import animals.Carnivorous;
 
 public class Zoo {
 
+   private static Aviary<Carnivorous> carnivorousAviary = new Aviary(Size.MEDIUM);
+   private static Aviary<Herbivore> herbivoreAviary = new Aviary(Size.SMALL);
     //создаем массив животных из пруда
     private static Swim[] createPond(){
 
@@ -57,9 +64,6 @@ public class Zoo {
         //работник зоопарка
         Worker worker = new Worker();
 
-//        WrongFoodException wfe = new WrongFoodException();
-//        WrongSizeException wse = new WrongSizeException();
-
         //кормим котика мясом смотрим на сытость
         System.out.println("Сытость: " + kotik.getSatiety() + " у " + kotik.getClass().getSimpleName());
         worker.feed(kotik, meat);
@@ -68,12 +72,11 @@ public class Zoo {
         worker.feed(kotik, grass);
         System.out.println("Сытость: " + kotik.getSatiety() + " у " + kotik.getClass().getSimpleName());
 
-
-        System.out.println("Сытость: " + duck.getSatiety() + " у " + duck.getClass().getSimpleName());worker.feed(duck, meat);
+        System.out.println("Сытость: " + duck.getSatiety() + " у " + duck.getClass().getSimpleName());
+        worker.feed(duck, meat);
         System.out.println("Сытость: " + duck.getSatiety() + " у " + duck.getClass().getSimpleName());
         worker.feed(duck, grass);
         System.out.println("Сытость: " + duck.getSatiety() + " у " + duck.getClass().getSimpleName());
-
 
         //рабочий просит подать голос котика
         worker.getVoice(kotik);
@@ -87,5 +90,36 @@ public class Zoo {
         for(Swim el: pond) {
             el.swim();
         }
+        fillCarnivorousAviary();
+        System.out.println(getCarnivorous("fish1"));
+
+        fillHerbivoreAviary();
+        System.out.println(getHerbivore("duck").toString());
+
+    }
+
+    private static void fillCarnivorousAviary() {
+        Fish fish1 = new Fish("fish1");
+       // Eagle eagle1 = new Eagle("eagle1");
+       carnivorousAviary.addAnimal(fish1);
+       // carnivorousAviary.addAnimal(eagle1);
+
+    }
+
+    private static void fillHerbivoreAviary() {
+        Duck duck1 = new Duck("duck");
+      //  Rabbit rabbit1 = new Rabbit("Rabbit1");
+        herbivoreAviary.addAnimal(duck1);
+        //herbivoreAviary.addAnimal(rabbit1);
+    }
+
+    private static Carnivorous getCarnivorous( String name) {
+        Carnivorous c = carnivorousAviary.getAnimal(name);
+        return c;
+    }
+
+    private static Herbivore getHerbivore(String name) {
+        Herbivore h = herbivoreAviary.getAnimal(name);
+        return h;
     }
 }

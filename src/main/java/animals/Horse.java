@@ -3,9 +3,10 @@
 */
 
 package animals;
+
 import animals.Run;
 import animals.Voice;
-import main.java.model.Size;
+import model.Size;
 
 public class Horse extends Herbivore implements Run, Voice {
 

@@ -6,14 +6,13 @@ package animals;
 
 import animals.Run;
 import animals.Voice;
-import main.java.model.Size;
+import model.Size;
 
 public class Rabbit extends Herbivore implements Run, Voice {
 
     public Rabbit(String name) {
         super(name);
     }
-
 
     @Override
     public void run() {
