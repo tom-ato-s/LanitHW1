@@ -1,9 +1,11 @@
 /* класс Лошадь.
 Расширяет Herbivore(травоядные), дополняет интерфейс Run(бежать), Voice(говорить)
+getSize() (возврящает размер животного)
 */
 
 package animals;
 
+import animals.Herbivore;
 import animals.Run;
 import animals.Voice;
 import model.Size;

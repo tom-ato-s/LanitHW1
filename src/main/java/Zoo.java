@@ -1,6 +1,7 @@
 /*
-Главный класс homework2
+Главный класс homework2, homework3
 В клсассе создаются экземпляры классов животных, действий, виды еды
+Также для homework3 вальеры для животных
  */
 
 import employee.Worker;
@@ -21,7 +22,7 @@ import animals.Herbivore;
 import animals.Carnivorous;
 
 public class Zoo {
-
+    //моздание вальеров для животных Carnivorous и Herbivore
    private static Aviary<Carnivorous> carnivorousAviary = new Aviary(Size.MEDIUM);
    private static Aviary<Herbivore> herbivoreAviary = new Aviary(Size.SMALL);
     //создаем массив животных из пруда
@@ -90,6 +91,8 @@ public class Zoo {
         for(Swim el: pond) {
             el.swim();
         }
+
+
         fillCarnivorousAviary();
         System.out.println(getCarnivorous("fish1"));
 
@@ -98,6 +101,10 @@ public class Zoo {
 
     }
 
+    /*
+    Статический метод, создает обьекты животных Хищники для вальера carnivorousAviary
+     и пытается добавить их в вальер
+     */
     private static void fillCarnivorousAviary() {
         Fish fish1 = new Fish("fish1");
        // Eagle eagle1 = new Eagle("eagle1");
@@ -105,19 +112,28 @@ public class Zoo {
        // carnivorousAviary.addAnimal(eagle1);
 
     }
-
+    /*
+     Статический метод, создает обьекты животных Твавоядные для вальера herbivoreAviary
+     и пытается добавить их в вальер
+     */
     private static void fillHerbivoreAviary() {
         Duck duck1 = new Duck("duck");
       //  Rabbit rabbit1 = new Rabbit("Rabbit1");
         herbivoreAviary.addAnimal(duck1);
         //herbivoreAviary.addAnimal(rabbit1);
     }
-
+    /*
+    Статический метод принимает хначение имени животного и возвращает ссылку на его обьект,
+    хранящийся в вальере carnivorousAviary
+    */
     private static Carnivorous getCarnivorous( String name) {
         Carnivorous c = carnivorousAviary.getAnimal(name);
         return c;
     }
-
+    /*
+    Статический метод принимает хначение имени животного и возвращает ссылку на его обьект,
+    хранящийся в вальере carnivorousAviary
+    */
     private static Herbivore getHerbivore(String name) {
         Herbivore h = herbivoreAviary.getAnimal(name);
         return h;

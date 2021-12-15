@@ -231,6 +231,7 @@ public class Kotik extends Carnivorous implements Run, Voice {
         Kotik.count = count;
     }
 
+    //getSize() возврящает размер животного
     @Override
     public Size getSize() {
         Size s = Size.SMALL;

@@ -1,3 +1,8 @@
+/*
+Класс создает исключение WrongFoodExceptionб когда тип еды животного не соответствует животному
+ */
+
+
 package food;
 
 import food.Food;

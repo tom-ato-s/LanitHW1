@@ -13,7 +13,7 @@ public class Worker {
 //покормить животное
     public void feed(Animal animal, Food food) {
         try{
-        animal.eat(food);
+            animal.eat(food);
         } catch (Exception e) {
             System.out.println("Не получилось покормить");
             e.printStackTrace();

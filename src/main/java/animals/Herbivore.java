@@ -18,6 +18,7 @@ public abstract class Herbivore extends Animal{
     @Override
     public void eat(Food food) {
         try{
+            //проверяет, что бы тип еды был Grass
             if (food instanceof Grass)
             throw new WrongFoodException("Ошибочка!", food);
             this.setSatiety(food.getEnergy());

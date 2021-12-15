@@ -1,3 +1,8 @@
+/*
+Обобщенный (generic) класс Aviary<> - создает вольер для животных с помощю HashMap.
+Есть возможность создать вальер для хищников и травоядных (наследников Animal).
+ */
+
 package model;
 
 import animals.Animal;
@@ -14,7 +19,9 @@ public class Aviary <T extends Animal> {
         groupAnimals = new HashMap<>();
         this.size = size;
     }
-
+    /* метод добавляет животного в вальер с проверкой размера животного и значение размера вальера.
+        Есть проверка еквивалентности размера вальера и животного
+    */
     public void addAnimal(T animal) {
        if (animal.getSize().equals(size)) {
            groupAnimals.put(animal.getName(), animal);
@@ -23,9 +30,11 @@ public class Aviary <T extends Animal> {
        }
     }
 
+    //возвращает объект животного из вальера по имени
     public T getAnimal(String name) {
        return groupAnimals.get(name);
         }
+    //возвращает объект животного из вальера по имени
 
     public boolean removeAnimal(String name) {
         return groupAnimals.remove(name, groupAnimals.get(name));

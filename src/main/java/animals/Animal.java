@@ -1,7 +1,8 @@
 /* Абстрактный класс Животные
 Главный родительский класс животных
 имеет абстрактный метод eat() (еда) и
-и реализованный клас  setSatiety() - добавление сытоски
+и реализованные класы  setSatiety() и setSatiety (добавление сытость), getName() (возвращает значение имени животного)
+ревлизация getName().
  */
 
 package animals;
@@ -20,10 +21,6 @@ public abstract class Animal{
         this.name = name;
     }
 
-    public String getName(){
-        return name;
-    }
-
     public abstract void eat(Food food);
 
     public abstract Size getSize();
@@ -35,6 +32,10 @@ public abstract class Animal{
     //добавляется количество сытосли к существующему
     public void setSatiety(int satiety) {
         this.satiety += satiety;
+    }
+
+    public String getName(){
+        return name;
     }
 
 

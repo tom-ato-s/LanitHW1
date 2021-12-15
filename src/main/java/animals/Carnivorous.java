@@ -18,6 +18,7 @@ public abstract class Carnivorous extends Animal {
     @Override
     public void eat(Food food) {
        try {
+           //проверяет, что бы тип еды был Meat
            if (food instanceof Meat)
             throw new WrongFoodException ("Ошибочка!", food);
             this.setSatiety(food.getEnergy());
