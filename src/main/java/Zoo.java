@@ -107,7 +107,7 @@ public class Zoo {
      */
     private static void fillCarnivorousAviary() {
         Fish fish1 = new Fish("fish1");
-       // Eagle eagle1 = new Eagle("eagle1");
+        Kotik kot1 = new Kotik("kot1");
        carnivorousAviary.addAnimal(fish1);
        // carnivorousAviary.addAnimal(eagle1);
 

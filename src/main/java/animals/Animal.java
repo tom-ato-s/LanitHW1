@@ -21,7 +21,7 @@ public abstract class Animal{
         this.name = name;
     }
 
-    public abstract void eat(Food food);
+    public abstract void eat(Food food) throws WrongFoodException;
 
     public abstract Size getSize();
 

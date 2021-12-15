@@ -15,8 +15,7 @@ public abstract class Carnivorous extends Animal {
     }
 
 //хищники едят только мясо
-    @Override
-    public void eat(Food food) {
+    public void eat(Food food) throws WrongFoodException{
        try {
            //проверяет, что бы тип еды был Meat
            if (food instanceof Meat)

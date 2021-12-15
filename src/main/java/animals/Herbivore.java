@@ -16,7 +16,7 @@ public abstract class Herbivore extends Animal{
 
 //травоядное ест только траву
     @Override
-    public void eat(Food food) {
+    public void eat(Food food) throws WrongFoodException{
         try{
             //проверяет, что бы тип еды был Grass
             if (food instanceof Grass)

@@ -17,7 +17,6 @@ public class Worker {
         } catch (Exception e) {
             System.out.println("Не получилось покормить");
             e.printStackTrace();
-            throw e;
         }
     }
 
