@@ -27,8 +27,6 @@ hs_err_pid*
 !/LanitHW1.iml
 !/.idea/
 
-/.idea/
-
 *.class
 
 *.iml
